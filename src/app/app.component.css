@@ -1,0 +1,173 @@
+section {
+  background: white;
+  width: 100%;
+  padding: 1em;
+  overflow: auto;
+}
+
+h1 {
+  font-size: 3em;
+  margin-bottom: 0.5em;
+  font-family: sans-serif;
+}
+
+div {
+  font-size: 18px;
+  line-height: 1.3em;
+  vertical-align: top;
+  margin-bottom: 1em;
+  padding: 5px;
+  margin: 10px;
+}
+
+.ib-left {
+  /* border: 2px solid gray; */
+  display: inline-block;
+  width: 20%;
+}
+
+.ib-right {
+  /* border: 2px solid gray; */
+  display: inline-block;
+  width: 65%;
+
+}
+
+.res {
+  /* border: 2px solid blueviolet; */
+  display: inline-block;
+  border: 1px solid #e7e7e7;
+  background: #FFF;
+  max-width: 300px;
+  /* width: 280px; */
+  width: 280px;
+  height: auto;
+  position: relative;
+  padding: 5px;
+  cursor: pointer;
+}
+
+.rate-vote {
+  display: inline-block;
+  /* border: 2px solid blueviolet; */
+  /* margin-top:4px; 
+  margin-right:5px;  */
+  position: absolute;
+  top: 20px;
+  right: 0px;
+
+}
+
+.name {
+  display: inline-block;
+  /* border: 2px solid blueviolet; */
+  margin-top: 4px;
+  color: #cb202d;
+  font-size: 18px;
+}
+
+.rating {
+  /* border: 2px solid blueviolet; */
+  font-size: 10px;
+  background: lightgreen;
+  border-radius: 4px;
+  text-align: center;
+  color: rgb(20, 19, 19);
+  padding: 0;
+  width: auto;
+  margin: 0 auto;
+}
+
+.votes {
+  margin-top: 1px;
+  font-size: 10px;
+  color: #89959B;
+  /* border: 2px solid blueviolet; */
+  width: auto;
+}
+
+.cuisines {
+  color: #89959B;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-bottom: 2px;
+  font-size: 13px;
+}
+
+.cost {
+  color: #89959B;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 13px;
+}
+
+.button {
+  border-radius: 4px;
+  background-color: #f4511e;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 15px;
+  padding: 8px;
+  width: 120px;
+  transition: all 0.5s;
+  cursor: pointer;
+  position: relative;
+  margin-left: 145px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+
+/* tooltip */
+
+tr:hover {
+  cursor: pointer;
+  color: blue;
+  text-decoration: none;
+}
+
+tr:hover td {
+  background: lightblue !important;
+}
+
+td {
+  color: #33373D;
+}
+
+.ib-right>h4 {
+  font-size: 35px;
+  color: green;
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  text-align: center;
+}
+
+.ib-left>h4 {
+  font-size: 20px;
+  color: green;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}

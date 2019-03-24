@@ -1,0 +1,42 @@
+<nav class="navbar navbar-dark bg-dark">
+  <!-- Navbar content -->
+  <a class="navbar-brand" href="">World Restaurants</a>
+  <form class="form-inline my-2 my-lg-0">
+    <input class="form-control mr-sm-2" type="search" name="search" [(ngModel)]="restaurantName" autocomplete="off"
+      placeholder="Search By Name...">
+  </form>
+</nav>
+
+
+
+<section>
+  <div class="ib-left">
+    <h4>Cuisine</h4>
+    <a (click)="removeFilters()" href="javascript: void(0);" *ngIf="searchText || restaurantName">remove filter</a>
+    <tbody>
+      <tr *ngFor="let cat of catList" (click)="setFilter(cat['_id'],cat['count'])">
+        <td>{{cat["_id"]}}</td>
+        <td>{{cat["count"]}}</td>
+      </tr>
+    </tbody>
+  </div>
+  <div class="ib-right">
+    <h4> {{heading}} </h4>
+    <!-- start of hotel div -->
+    <div class="res" *ngFor="let rest of resList | containsPipe:searchText | searchByName: restaurantName" (click)="openOnMaps(rest['Restaurant Name'],rest['address'][0]['Longitude'],rest['address'][0]['Latitude'])">
+      <h5 class="name">{{rest["Restaurant Name"]}}</h5>
+      <div class="rate-vote">
+        <p class="rating" title="{{rest['Rating text']}}" [style.background]="getRatingColor(rest['Rating color'])">{{rest["Aggregate
+          rating"]}}</p>
+        <p class="votes">{{rest["Votes"]}} votes</p>
+      </div>
+      <p class="cuisines">{{rest["Cuisines"]}}</p>
+      <p class="cost">Cost for 2: {{rest["Average Cost for two"]}}{{getCurrency(rest["Currency"])}}</p>
+      <button class="button"><span>Dine Out</span></button>
+    </div>
+    <!-- end of hotel div  -->
+
+  </div>
+</section>
+
+<router-outlet></router-outlet>
